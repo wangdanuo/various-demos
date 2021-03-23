@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var array=[1,9,9,6,1,0,3,0];
+    var newArray=[];
+/*
+    方法1：
+    var set=new Set(array);
+    newArray=Array.from(set);
+*/
+/*
+    方法2：
+    for(var i=0;i<array.length;i++){
+        if(newArray.indexOf(array[i])==-1){
+            newArray.push(array[i]);
+        }
+    }
+*/
+    newArray=array.filter(function(current,index){
+        return array.indexOf(current)==index;
+    })
+    console.log(newArray);
+</script>
+</html>

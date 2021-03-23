@@ -1,0 +1,26 @@
+.parent {
+  width: 200px;
+  height: 150px;
+  background-color: black;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+
+.child {
+  box-sizing: border-box;
+  background-color: white;
+  flex: 0 0 25%;
+  height: 50px;
+  border: 1px solid red;
+}
+/* .view-style {
+  max-width: 170px;
+  max-height: 158px;
+  border: 1px solid orange;
+  position: relative;
+}
+.view-img {
+  max-width: 170px;
+  max-height: 158px;
+} */

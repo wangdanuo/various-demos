@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function Car(name) {
+        this.name = name;
+    }
+    Car.prototype.name = 'prototype car';
+    Car.prototype.sayName = function () {
+        console.log('sayName-this', this);
+        return `hello, I am ${this.name}`;
+    }
+    Car.prototype.sayNameF = () => {
+        console.log('sayNameF-this', this);
+        return `hello, I am ${this.name}`;
+    }
+    const car = new Car('car1');
+    console.log(car.sayName());
+    console.log(car.__proto__.sayName());
+    console.log(car.__proto__.sayNameF());
+</script>
+</html>

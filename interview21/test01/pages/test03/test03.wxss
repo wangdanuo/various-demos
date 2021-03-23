@@ -1,0 +1,67 @@
+/* pages/test03/test03.wxss */
+.container .title {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     padding: 25rpx;
+}
+.container .title_txt {
+    font-size: 34rpx;
+    color: #2b2b2b;
+}
+.container .title_icon {
+    display: block;
+    width: 21rpx;
+    height: 11rpx;
+}
+.content{
+    background: skyblue;
+    height: 50rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* text-overflow: -o-ellipsis-lastline; */
+    /* display: -webkit-box; */
+    /* -webkit-line-clamp: 2; */
+    /* -webkit-box-orient: vertical; */
+    padding: 0 25rpx;
+    font-size: 30rpx;
+    color: #888888;
+}
+.on{
+    background: lightgreen;
+    display: block;
+    text-overflow: clip;
+    overflow: visible;
+}
+/* 111 */
+.test {
+  background: pink;
+  border: 1px solid black;
+  font-size: 12px;
+}
+.test-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25rpx;
+}
+.icon {
+  display: block;
+  width: 21rpx;
+  height: 11rpx;
+}
+.test-bottom{
+  background: skyblue;
+  height: 2rpx;
+  overflow: hidden;
+  /* text-overflow: ellipsis; */
+  /* padding: 0 25rpx; */
+  /* font-size: 30rpx; */
+}
+/* .open{ */
+  /* display: block; */
+  /* text-overflow: clip; */
+  /* overflow: visible; */
+/* } */

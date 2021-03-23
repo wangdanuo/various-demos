@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .two {
+      height: 116px;
+      width: 116px;
+      background: #999;
+      position: relative;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #FFF;
+      font-size: 28px;
+      transform: rotate(-30deg);
+    }
+    .two::before {
+      content: "";
+      position: absolute;
+      top: -9px;
+      left: -9px;
+      right: -9px;
+      bottom: -9px;
+      border: solid 3px #999;
+      border-radius: 50%;
+    }
+    .word {
+      color: #FFF;
+      transform: rotate(-30deg);      
+    }
+  </style>
+</head>
+<body>
+  <div class="two">
+    已使用
+    <!-- <span class="word">已使用</span> -->
+  </div>
+</body>
+</html>

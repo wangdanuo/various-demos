@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <canvas id="myCanvas" width="325" height="500" style="border:1px solid #000000;"></canvas>
+</body>
+<script>
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  ctx.font = "18px Georgia";
+  var text = '傍晚六点下班换掉药厂的衣裳妻子在熬粥我去喝几瓶啤酒如此生活三十年直到大厦崩塌云层深处的黑暗啊淹没心底的景观'
+  var chr = text.split('')
+  console.log(chr, 'chr');
+  var temp = ''
+  var row = []
+  for (var a = 0; a < chr.length; a++) {
+    if (ctx.measureText(temp).width < 250) {
+      temp += chr[a]
+    } else {
+      a-- // 这里添加了a-- 是为了防止字符丢失
+      row.push(temp)
+      temp = ''
+    }
+  }
+  console.log(row.length, 'row');
+  // 如果数组长度大于2 则截取前两个
+  if (row.length > 2) {
+    var rowCut = row.slice(0, 2)
+    var rowPart = rowCut[1]
+    var test = ''
+    var empty = []
+    for (var b = 0; b < rowPart.length; b++) {
+      if (ctx.measureText(test).width < 220) {
+        test += rowPart[b]
+      } else {
+        break
+      }
+    }
+    empty.push(test)
+    var group = empty[0] + '...' // 显示两行
+    rowCut.splice(1, 1, group)
+    console.log(rowCut, 'cut');
+    row = rowCut
+  }
+  for (var c = 0; c < row.length; c++) {
+    ctx.fillText(row[c], 32, 320 + c * 30, 260)
+  }
+  // var chr = text.split('')
+  // var temp = ''
+  // var row = []
+  // ctx.setFontSize(18)
+  // ctx.setFillStyle('#000')
+  // for (var a = 0; a < chr.length; a++) {
+  //   if (ctx.measureText(temp).width < 250) {
+  //     temp += chr[a]
+  //   } else {
+  //     a-- // 这里添加了a-- 是为了防止字符丢失
+  //     row.push(temp)
+  //     temp = ''
+  //   }
+  // }
+  // row.push(temp)
+  // 如果数组长度大于2 则截取前两个
+  // if (row.length > 2) {
+  //   var rowCut = row.slice(0, 2)
+  //   var rowPart = rowCut[1]
+  //   var test = ''
+  //   var empty = []
+  //   for (var b = 0; b < rowPart.length; b++) {
+  //     if (ctx.measureText(test).width < 220) {
+  //       test += rowPart[b]
+  //     } else {
+  //       break
+  //     }
+  //   }
+  //   empty.push(test)
+  //   var group = empty[0] + '...' // 显示两行
+  //   rowCut.splice(1, 1, group)
+  //   row = rowCut
+  // }
+  // for (var c = 0; c < row.length; c++) {
+  //   ctx.fillText(row[c], 32, 320 + c * 30, 260)
+  // }
+  // ctx.draw()
+</script>
+
+</html>

@@ -1,0 +1,31 @@
+
+  <view class="container">
+      <view class="title">
+          <text class="title_txt">支付详情</text>
+          <image class="title_icon" src="{{isShow ? 'https://file.snailpet.cn/23/a4/23a4787efd85b48db2102dcb51735e2c.png' : 'https://file.snailpet.cn/03/ad/03addd057eb67d09feef31894762d7f2.png'}}" bindtap="toChange"/>
+      </view>
+      <view class="content {{isShow ? 'on' : ''}}">
+          <view class='cost flex-colum lr-padding'>
+              <view class='goods-cost flex-row'>
+                  <text class='cost-title text666-color'>总支付</text>
+                  <text class='cost-detail tl-color-186 text-r text-over-ell'><!--团满50件应退款--><text class='main-color cost-m tl-color-186'>￥{{tools.tool.toFixed2(orderData.refund_price?orderData.refund_price : 0)}}</text></text>
+              </view>
+              <view class='goods-cost flex-row'>
+                  <text class='cost-title text666-color'>总优惠金额</text>
+                  <text class='cost-detail tl-color-186 text-r text-over-ell'><text class='main-color cost-m tl-color-186'>￥{{tools.tool.toFixed2(orderData.wait_refund)}}</text></text>
+              </view>
+              <view class='goods-cost flex-row'>
+                  <text class='cost-title text666-color'>支付方式</text>
+                  <text class='cost-detail text666-color text-r text-over-ell'>合计：<text class='main-color cost-m tl-color-186'>￥{{tools.tool.toFixed2(goodsAllPrice)}}</text></text>
+              </view>
+              <view class='goods-cost flex-row'>
+                  <text class='cost-title text666-color'>收银人员</text>
+                  <text class='cost-detail text666-color text-r text-over-ell'>合计：<text class='main-color cost-m tl-color-186'>￥{{tools.tool.toFixed2(goodsAllPrice)}}</text></text>
+              </view>
+              <view class='goods-cost flex-row'>
+                  <text class='cost-title text666-color'>订单号</text>
+                  <text class='cost-detail text666-color text-r text-over-ell'>合计：<text class='main-color cost-m tl-color-186'>￥{{tools.tool.toFixed2(goodsAllPrice)}}</text></text>
+              </view>
+          </view>
+      </view>
+  </view> 

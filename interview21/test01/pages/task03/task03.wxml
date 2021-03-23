@@ -1,0 +1,3 @@
+<button open-type="getUserInfo">getUserInfo</button>
+<view bindtap="showModal">show</view>
+<progress border-radius="100" class="progress" stroke-width="30" percent="50"></progress>

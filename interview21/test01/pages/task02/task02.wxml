@@ -1,0 +1,8 @@
+<!-- <view id="id" class = "ball" bindtap = "handletap" bindtouchstart = "handletouchtart" bindtouchmove="handletouchmove">
+{{text}}
+</view> -->
+<view  bindtouchstart="touchStart" bindtouchend="touchEnd" class="ball">
+	<!--待监听功能模块-->
+	<view class="ppp">111</view>
+</view>
+<image bindtouchstart="touchStart" bindtouchend="touchEnd" style="width: 200px;height: 100px" src="../../images/xiaoliuya.jpeg"/>

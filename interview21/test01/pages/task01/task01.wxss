@@ -1,0 +1,41 @@
+/* 隐藏scroll-view滚动条 */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.task-wrap {
+  padding: 30px;
+  background: red;
+  height: 460px;
+}
+.swiper {
+  background: pink;
+  width: 300px;
+  height: 38px;
+  line-height: 38px;
+  position: relative;
+  left: 50%;
+  margin-left: -150px;
+}
+.task-list {
+  height: 400px;
+  border-top: 2px solid purple;
+  border-radius: 3%;
+  background: seashell;
+  /* padding-bottom: 50px; */
+  /* margin-top: 16px; */
+  /* 
+  overflow: hidden;
+  overflow-y: scroll; 
+  */
+}
+.task-list-bef {
+  height: 60px;
+  background: pink;
+}
+.list-item {
+  height: 100px;
+  background: tan;
+  border-bottom: 1px solid #000;
+}

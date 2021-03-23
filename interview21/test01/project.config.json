@@ -1,0 +1,139 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "useApiHostProcess": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.12.2",
+  "appid": "wx853aabf0da824bfe",
+  "projectname": "demo%2Ftest01",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "优惠券",
+          "pathName": "pages/test02/test02",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -2,
+          "name": "下拉组件",
+          "pathName": "pages/useSelect/useSelect",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -3,
+          "name": "订阅消息",
+          "pathName": "pages/test05/test05",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -5,
+          "name": "滚动加载",
+          "pathName": "pages/test06/test06",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -6,
+          "name": "跳转小程序",
+          "pathName": "pages/jump/jump",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -7,
+          "name": "测试订阅消息202011",
+          "pathName": "pages/sub202011/sub202011",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "测试登录",
+          "pathName": "pages/task01/task01",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "task02",
+          "pathName": "pages/task02/task02",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "task03",
+          "pathName": "pages/task03/task03",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "测试路径参数",
+          "pathName": "pages/test06/test06",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "test07",
+          "pathName": "pages/test07/test07",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 800px;
+            height: 500px;
+            background-color: pink;
+            font-size: 40px;
+            text-align: center;
+            line-height: 500px;
+        }
+        body{
+            margin:0px;
+            padding:0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+<script>
+/*
+    function a(arg){
+        console.log(111+arg);
+        return function(){
+            console.log(123);
+        }
+    }
+    box.onmousemove=a("Jobs");  //带括号是调用一个函数，将函数的返回值绑定为事件的处理函数。
+*/
+/*
+    const box=document.getElementById("box");
+    function a(b){
+        console.log("this_a:",this);
+        return function(){
+            setTimeout(() => {
+                b(console.log(this));
+            }, 500);
+        };
+    }
+    box.onmousemove=a(function(){});
+*/
+</script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //async功能：调用async修饰的函数，返回一个promise对象。
+    let hello=async ()=>{
+        return "hello,world";
+    }
+    console.log(hello());
+/*
+    hello().then(data=>{
+        console.log(data);
+    })
+    简写成↓：
+*/  
+    hello().then(console.log);
+</script>
+</html>

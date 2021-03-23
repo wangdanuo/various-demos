@@ -1,0 +1,66 @@
+.coupon {
+  /* display: flex; */
+  position: relative;
+  /* width: 320px; */
+  /* height: 100px; */
+  font-size: 12px;
+  padding: 0 16px;
+}
+.circle {
+  position: absolute;
+  top: 74px;
+  left: 10px;
+  width: 10px;
+  height: 10px;
+  background: #FFF;
+  border: 1px solid black;
+  border-radius: 50%;
+  border-left: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  transform: rotate(46deg);
+}
+.coupon .coupon-top {
+  height: 80px;
+  background: radial-gradient(circle at bottom left, transparent 5px, pink 0) bottom left, radial-gradient(circle at bottom right, transparent 5px, pink 0) bottom right;
+  background-size: 60% 100%;
+  background-repeat: no-repeat;
+  border-radius: 5px 5px 0 0;
+  /* border-top: 1px solid orange; */
+}
+.coupon-top2 {
+  margin-top: 50px;
+  height: 80px;
+  background: pink;
+  background-size: 60% 100%;
+  background-repeat: no-repeat;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid black;
+  border-bottom: none;
+}
+.coupon-bottom2 {
+  background: pink;
+  height: 30px;
+  color: #8D8E99;
+  background-size: 60% 100%;
+  background-repeat: no-repeat;
+  border-radius: 0 0 5px 5px;
+  border: 1px solid black;
+  border-top: none;
+}
+.coupon .coupon-bottom {
+  background: radial-gradient(circle at top left, transparent 5px, pink 0) top left,radial-gradient(circle at top right, transparent 5px, pink 0) top right;
+  height: 30px;
+  color: #8D8E99;
+  background-size: 60% 100%;
+  background-repeat: no-repeat;
+  border-radius: 0 0 5px 5px;
+  /* border: 1px solid orange; */
+}
+.coupon-top::after{
+  content: "";
+  position: absolute;
+  top: 80px;
+  width: 311px;
+  /* border-left: 2rpx dashed #fff; */
+  border-top: 1rpx dashed #FFC4A3;
+}

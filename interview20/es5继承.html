@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //继承：实现代码高度复用
+    //父类：
+    function Human(name,age,sex){
+        this.name=name;
+        this.age=age;
+        this.sex=sex;
+    }
+    Human.prototype.eat=function(){
+        alert("吃出健康来！");
+    }
+    //子类：子类继承父类的属性和方法
+    //方法继承：原型拷贝
+    //属性继承：通过call方法
+    function Student(sno,sdept,name,age,sex){
+        //继承父类的属性
+        Human.call(this,name,age,sex);	//调用父类的构造器函数，使Human类的this指向Student类的this，并且传递实参
+        //子类自身属性
+        this.sno=sno;
+        this.sdept=sdept;
+    }
+    //自身方法
+    Student.prototype.study=function(){
+        alert("好好学习~");
+    }
+    for(var key in Human.prototype){
+        Student.prototype[key]=Human.prototype[key];
+    }
+    var s1=new Student("1001","计算机系","Obama",22,"男");
+</script>
+</html>

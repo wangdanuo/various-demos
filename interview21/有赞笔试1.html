@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red-box {
+            background: red;
+            width: 400px;
+            height: 400px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .black-box {
+            background: black;
+            width: 400px;
+            height: 400px;
+            margin-top: 20px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="red-box"></div>
+    <div class="black-box"></div>
+</body>
+<script>
+    // "use strict";
+    let i = 2;
+    setTimeout((function() {
+        let i = 5;
+        console.log('this', this); // Window
+        let temp = this.i;
+        return function() {
+            console.log(`temp is ${temp}`);
+            console.log(`第一个i is ${i}`);
+        }
+    })(), 100);
+    setTimeout((function() {
+        return function() {
+            console.log(`第二个i is ${i}`);
+        }
+    })(), 0);
+    console.log(`第三个i is ${i++}`);
+</script>
+</html>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "select": "../../component/select2/select2",
+    "coupon-select": "../../component/selectLast/selectLast"
+  }
+}

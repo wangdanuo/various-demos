@@ -1,0 +1,10 @@
+<view class="wrapper">
+  <scroll-view scroll-y="true" class="scroll" bindscroll="scroll" scroll-into-view="{{id}}">
+    <view class="title">title</view>
+    <view class="address">address</view>
+    <!-- <view class="add" wx:if="{{false}}">add</view> -->
+    <view class="detail" id="detail">detail{{id}}</view>
+    <view class="notice" bindtap="change" id="notice">notice</view>
+  </scroll-view>
+  <view class="fix_top" wx:if="{{showTop}}"></view>
+</view>

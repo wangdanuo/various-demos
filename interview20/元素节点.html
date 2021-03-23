@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            color: pink;
+            background: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">韩寒会画画后悔画韩红</div>
+</body>
+<script>
+    //添加元素节点和文本节点
+    window.onload=function(){
+        var p1=document.createElement("p");
+        var div1=document.getElementById("div1");
+        div1.appendChild(p1);
+        var t1=document.createTextNode("郭德纲");
+        div1.appendChild(t1);
+    }
+
+</script>
+</html>

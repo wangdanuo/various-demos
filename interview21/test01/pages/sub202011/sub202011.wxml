@@ -1,0 +1,9 @@
+<view bindtap="handleSub01">点击订阅新上架画稿提醒</view>
+<view class="loading-wrap">
+  <view wx:for="{{dataArr}}" wx:key="index">
+    {{item}}
+  </view>
+  <!-- <image wx:if="{{loadingShow}}" src="../../images/xiaoliuya.jpeg" bindtap="onClickImg"/> -->
+  <!-- <image wx:else class="loading-img" src="../../images/loading.gif" bindtap="onClickImg"/> -->
+</view>
+<button open-type="share" bindtap="() => clickBtn('111111')">按钮</button>

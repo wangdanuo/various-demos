@@ -1,0 +1,11 @@
+.ball {
+  width: 100%;
+  height: 80px;
+  background: pink;
+  position: relative;
+  overflow: hidden;
+}
+.ppp {
+  position: absolute;
+  bottom: 300px;
+}

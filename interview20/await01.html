@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function fakeAjax(){
+        return new Promise((res)=>{
+            setTimeout(() => {
+                res("假装的异步操作")
+            }, 3000);
+        });
+    }
+    async function test(){
+        const v=await fakeAjax();   //阻塞执行，等待右侧异步执行成功,返回一个Promise对象，才往下执行
+        console.log(v);
+    }
+    test();
+</script>
+</html>

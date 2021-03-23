@@ -1,0 +1,46 @@
+<button bindtap="clickLogin">点击登录</button>
+<button open-type="share" bindtap="clickShare">点击分享</button>
+<view class="swiper-wrap">
+  <swiper autoplay="true" interval="3000" duration="1500" class="swiper" circular="true" vertical="true">
+    <swiper-item>1</swiper-item>
+    <swiper-item>2</swiper-item>
+  </swiper>
+</view>
+<view bindtap="handleSave">关注公众号</view>
+<!-- 
+<swiper class="task-list" autoplay="false" interval="3000" duration="1500" vertical="true" display-multiple="4">
+  <swiper-item class="list-item">000</swiper-item>
+  <swiper-item class="list-item">999</swiper-item>
+</swiper> 
+-->
+<!-- 
+<view class="task-list">
+  <view class="list-item">item1</view>
+</view> 
+-->
+<view class="task-wrap">
+  <!-- <view class="task-list-bef" bindtouchstart="onstart" bindtouchend="onend">
+    ❀
+  </view> -->
+  <scroll-view 
+    scroll-y="{{list.length > 5 ? 'true' : 'false'}}" class="task-list"
+    bindscroll="onscroll"
+  >
+    <view class="list-item">111</view>
+    <view class="list-item">111</view>
+    <view class="list-item">111</view>
+    <view class="list-item">111</view>
+    <view class="list-item">111</view>
+    <view class="list-item">111</view>
+    <view class="list-item">111</view>
+    <view class="list-item">111</view>
+    <view class="list-item">111</view>
+    <view class="list-item">111</view>
+    <view class="list-item">111</view>
+    <view class="list-item">111</view>
+    <view class="list-item">111</view>
+  </scroll-view>
+</view>
+
+<text>111</text>
+

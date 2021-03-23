@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>防抖</title>
+    <style>
+        #box{
+            width: 800px;
+            height: 500px;
+            background-color: pink;
+            font-size: 40px;
+            text-align: center;
+            line-height: 500px;
+        }
+        body{
+            margin:0px;
+            padding:0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+<script>
+    const box=document.getElementById("box");
+    function debounce(func,delay){
+        let timeout;
+        return function(){
+            clearTimeout(timeout);
+            timeout=setTimeout(() => {
+                console.log(this);
+                // func.apply(this,arguments);  //让debounce函数最终返回的函数this指向不变以及依旧能接受到e参数
+            },delay);
+        }
+    }
+    box.onmousemove=debounce(function(e){
+        box.innerHTML=`${e.clientX},${e.clientY}`;
+    },1000);
+</script>
+</html>

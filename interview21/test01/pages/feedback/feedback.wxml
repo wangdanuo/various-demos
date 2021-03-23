@@ -1,0 +1,22 @@
+<!--pages/feedback/feedback.wxml-->
+<view>
+    <radio-group bindchange="onTypeChange">
+        <label wx:for="{{items}}" wx:key="{{item.value}}">
+            <radio value="{{item.value}}" checked="{{item.checked}}"/>
+            <text>{{item.name}}</text>
+        </label>
+    </radio-group>
+    <textarea maxlength="20" placeholder="描述问题">
+    </textarea>
+    <view class="parent">
+        <view class="child">
+            <!-- <image class="view-img" src="http://img.souche.com/9a1976b295ef528802e5870b108a4824.jpg"></image> -->
+        </view>
+        <view class="child">
+            <!-- <image class="view-img" src="http://img.souche.com/9a1976b295ef528802e5870b108a4824.jpg"></image> -->
+        </view>   
+        <view class="child">
+            <!-- <image class="view-img" src="http://img.souche.com/9a1976b295ef528802e5870b108a4824.jpg"></image> -->
+        </view>   
+    </view>
+</view>

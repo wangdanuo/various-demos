@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  var arr = [2, 54, 6, 7, 83, 5, 46, 47, 5423, 6, 44, 26, 457, 58, 68, 65, 1, 42, 9]
+  var newArr = []
+  for (let i = 0; i < arr.length; i += 10) {
+    newArr.push(arr.slice(i, i + 10))
+  }
+  console.log(newArr)
+  console.dir(newArr)
+  // let list = ['a','b','c','d','e']
+  // let arr = []
+  // for(let i = 0, length = list.length; i < length; i += 2){
+  //     arr.push(list.slice( i,i + 2 ))
+  // }
+  // console.log(arr)
+</script>
+
+</html>

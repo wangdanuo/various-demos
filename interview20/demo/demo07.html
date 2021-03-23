@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>答案</title>
+    
+    <script>
+       var input = [{
+        id: 1,
+        text: 'text1',
+        children: [{
+            id: 2,
+            text: 'text2',
+            parentId: 1,
+            children: [{
+                id: 4,
+                text: 'text4',
+                parentId: 2
+            }]
+        }, {
+            id: 3,
+            text: 'text3',
+            parentId: 1
+        }]
+    }];
+    
+    var output = [];
+    function walk( arr ) {
+        arr.forEach( item => {
+            if ( item.children ) {
+                walk( item.children );
+                delete item.children;
+            }
+            output.push( item );
+        })
+    };
+    walk(input)
+    console.log(output);
+    
+    </script>
+
+</head>
+<body>
+</body>
+</html>

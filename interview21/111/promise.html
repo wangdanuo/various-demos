@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  function async_01() {
+    var p = new Promise(function (resolve, reject) {
+      setTimeout(function () {
+        console.log("执行完成1");
+        resolve("郭德纲");
+      }, 2000);
+    });
+    return p;
+  }
+  async_01();
+
+  // const urls = (await Promise.all(tempFiles.map(item => {
+  //   uploadFile(item.path)
+  // }))).map(d => d.url)
+
+  // const urls = (await tempFiles.map(item => {
+  //   uploadFile(item.path)
+  // })).map(d => d.url)
+
+  // let arr = ['ewa', 'rerwe', 'reg']
+  // let i = 0
+  // arr.map((item, index) => {
+  //   // todo
+  // })
+</script>
+
+</html>

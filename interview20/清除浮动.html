@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a,.b{
+            height: 100px;
+            width: 100px;
+            border: 3px solid pink;
+        }
+        .a{
+            float: left;
+        }
+        .b{
+            float: right;
+        }
+        .c{
+            border: 3px solid blue;
+            *zoom: 1;   /* 触发IE的hasLayout，星号表示只有IE6-IE7执行*/
+        }
+        .c::after,.c::before{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .footer,.header{
+            height: 100px;
+            border: 3px solid red;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="header">666</div> -->
+    <div class="c">
+        <div class="a">a</div>
+        <div class="b">b</div>
+    </div>
+    <div class="footer">999</div>
+</body>
+</html>

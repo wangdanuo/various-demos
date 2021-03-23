@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let a;
+    let barObj={msg:"bar的this指向"};
+    let fooObj={msg:"foo的this指向"};
+    bar.call(barObj);
+    foo.call(fooObj);
+    function foo(){
+        a();
+    }
+    function bar(){
+        a=()=>{
+            console.log(this);
+        }
+    }
+</script>
+</html>

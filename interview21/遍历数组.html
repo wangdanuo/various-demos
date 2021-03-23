@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var array = [10,34,57,43,76];
+    var res = array.forEach(function (item, index, input) {
+        input[index] = item*10;
+    })
+    console.log(res);   // undefined
+    console.log(array);
+    var array2 = [10,34,57,43,76];  
+    var res2 = array.map(function (item,index,input) {  
+        return item*10;   
+    })  
+    console.log(res2);
+    console.log(array2);    // 不变
+</script>
+</html>

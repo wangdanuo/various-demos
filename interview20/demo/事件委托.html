@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myList">
+        <div id="item1">item1</div>
+        <div id="item2">item2</div>
+        <div id="item3">item3</div>
+        <div id="item4">item4</div>        
+    </div>
+</body>
+<script>
+/* var item1 = document.getElementById("item1");
+var item2 = document.getElementById("item2");
+var item3 = document.getElementById("item3");
+var item4 = document.getElementById("item4");
+item1.onclick = function(){
+	console.log("I am item1");
+}
+item2.onclick = function(){
+	console.log("I am item2");
+}
+item3.onclick = function(){
+	console.log("I am item3");
+}
+item4.onclick = function(){
+	console.log("I am item4");
+} */
+// 使用事件委托
+var myList = document.getElementById("myList");
+myList.onclick = function(ev){
+	var ev = ev || window.event;
+　　var target = ev.target || ev.srcElement;
+　　switch(target.id){
+　　	case "item1": 
+　　		console.log("I am item1");
+　　		break;
+　　	case "item2": 
+　　		console.log("I am item2");
+　　		break;
+　　	case "item3": 
+　　		console.log("I am item3");
+　　		break;
+　　	case "item4": 
+　　		console.log("I am item4");
+　　		break;
+　　}
+}
+</script>
+</html>

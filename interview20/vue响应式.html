@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var obj={
+        name:"Jobs",
+        age:66
+    }
+    var _value=obj.name;
+    Object.defineProperty(obj,"name",{
+        get: function(){
+            console.log("get name");
+            return _value;
+        },
+        set: function(newVal){
+            console.log("set name");
+            _value=newVal;
+            return 
+        }
+    });
+    // console.log(Object.getOwnPropertyDescriptor(obj,"name"));
+</script>
+
+</html>

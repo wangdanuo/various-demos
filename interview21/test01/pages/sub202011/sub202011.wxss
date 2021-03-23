@@ -1,0 +1,11 @@
+/* pages/sub202011/sub202011.wxss */
+.loading-wrap {
+  width: 300px;
+  height: 300px;
+  box-sizing: border-box;
+  border: 2px solid blue;
+}
+.loading-img {
+  min-width: 100%;
+  min-height: 100%;
+}

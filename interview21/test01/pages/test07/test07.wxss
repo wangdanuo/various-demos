@@ -1,0 +1,36 @@
+.wrapper {
+  background: #F8F8F8;
+}
+.scroll {
+  height: 100vh;
+}
+.title {
+  height: 300px;
+  background: #fff;
+}
+.address {
+  height: 100px;
+  background: #fff;
+  border-top: 1px #EAEBEE solid;
+}
+.add {
+  height: 50px;
+  background: yellow;
+}
+.detail {
+  height: 600px;
+  background: #fff;
+  margin-top: 10px;
+}
+.notice {
+  height: 600px;
+  background: #fff;
+  margin-top: 10px;
+}
+.fix_top {
+  width: 100%;
+  height: 50px;
+  background: pink;
+  position: fixed;
+  top: 0;
+}

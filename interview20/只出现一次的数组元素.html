@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function getUnique(array){
+        var res = [];
+        for (let i = 0;i<array.length;i++){
+            if(array.indexOf(array[i]) === array.lastIndexOf(array[i])){
+                res.push(array[i]);
+            }
+        }
+        console.log(res);
+        return res;
+    }
+    getUnique([1,1,2,2,5,10,5,8,6,6,3,3]);
+</script>
+</html>

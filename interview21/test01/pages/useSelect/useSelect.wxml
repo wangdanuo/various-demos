@@ -1,0 +1,7 @@
+<view>
+  <coupon-select array-data="{{optionData}}"></coupon-select>
+</view>
+<view>==================================</view>
+<view>
+  <select prop-array='{{selectArray}}'></select>
+</view>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class Person{
+        //初始化对象的属性
+        constructor(name,age,sex){
+            this.name=name;
+            this.age=age;
+            this.sex=sex;
+        }
+        eat(){
+            console.log("烧花鸭");
+        }
+    }
+    class Student extends Person{
+        constructor(name,age,sex,sno,sdept){
+            super(name,age,sex);
+            this.sno=sno;
+            this.sdept=sdept;
+        }
+        study(){
+            alert("认真，自律。");
+        }
+    }
+    let p1=new Person("Obama",416,"男");
+    let s1=new Student("Jobs",386,"男","10001","Phone");
+</script>
+</html>

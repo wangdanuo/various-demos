@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #box {
+      width: 300px;
+      height: 300px;
+      background: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="box"></div>
+</body>
+<script>
+  const box = document.getElementById("box");
+  function throttle (func, delay) {
+    let run = true;
+    return function () {
+      if (!run) {
+        return;
+      }
+      run = false
+      setTimeout(() => {
+        func.apply(this,arguments);
+        run = true
+      }, delay)
+    }
+  }
+  box.onmousemove = throttle(function(e) {
+    box.innerHTML = `${e.clientX}, ${e.clientY}`
+  }, 1000)
+  box.onclick = throttle(function() {
+    console.log(111)
+  }, 1000)
+</script>
+
+</html>

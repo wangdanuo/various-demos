@@ -1,0 +1,14 @@
+<!--pages/test05/test05.wxml-->
+<view bindtap="handleMandate1">点击授权(始终允许)</view>
+<view bindtap="handleMandate2">点击授权(允许一次)</view>
+<view bindtap="handleMandate3">点击授权(取消)</view>
+<view bindtap="handleMandate4">点击授权(勾选始终保持，并取消)</view>
+<view bindtap="handleMandate5">点击授权(勾选始终保持，并允许)</view>
+
+<view bindtap="handleGetSetting">调用getSetting</view>
+<view bindtap="handleOpenSetting">调用openSetting</view>
+<view bindtap="handleSendMsg">点击推送订阅消息</view> 
+<view>=================================</view>
+<view bindtap="clickTest">点击测试</view>
+<view bindtap="handleTest1">测试订阅消息</view>
+<view bindtap="clickW">测试未登录调API</view>

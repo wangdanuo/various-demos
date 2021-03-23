@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var testObj={
+        name:"Tom",
+        main:{a:111,b:222},
+        fn:function(){return "Michael Jackson"}
+    }
+/*
+    方法1：
+    function deepClone(obj){
+        let newObj=null;
+        if(typeof obj==="object" && obj!==null){
+            newObj=Array.isArray(obj)?[]:{};
+            for(let key in obj){
+                if(obj.hasOwnProperty(key)){
+                    if(typeof obj[key]!=="object"){
+                        newObj[key]=obj[key];
+                    }else{
+                        newObj[key]=deepClone(obj[key]);
+                    }
+                }
+            }
+        }else{
+            newObj=obj;
+        }
+        console.log(newObj);
+        return newObj;
+    }
+*/
+    // 方法2：
+    function deepClone(obj){
+        let obj1=JSON.stringify(obj);
+        let obj2=JSON.parse(obj1);
+        console.log(obj2);
+        return obj2;
+    }
+    let otherObj={   //属性中不能包含函数
+        a:"Jobs",
+        b:{name:{detail:"Obama"}},
+        c:[7,8,9]
+    }
+    deepClone(otherObj);
+</script>
+</html>

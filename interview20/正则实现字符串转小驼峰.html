@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var str = 'get-element-by-id';
+    var reg = /-\w/g;
+    var str1 = str.replace(reg,function(s){
+        return s.substring(1).toUpperCase();
+    })
+    console.log(str1);
+</script>
+</html>

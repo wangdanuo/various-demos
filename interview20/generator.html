@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script>
+/*
+    function* gen(){
+        var y1=yield console.log(111);
+        console.log(y1);
+        yield "Obama";
+        yield "Trump";
+    }
+    var g=gen();
+    console.log(g.next());
+    console.log(g.next());
+    console.log(g.next());
+    console.log(g.next());
+*/
+/*
+    function* gen(){   //回调函数(被当作实参传递的函数)
+        var posts=yield $.getJSON("https://jsonplaceholder.typicode.com/posts");
+        console.log("posts:",posts);
+        var users=yield $.getJSON("https://jsonplaceholder.typicode.com/users");
+        console.log("users:",users);
+    }
+    var g=gen();
+    g.next().value.then(function(data1){	//地狱回调
+        g.next(data1).value.then(function(data2){
+            g.next(data2);
+        });
+    });
+*/
+    function* gen(){   //回调函数(被当作实参传递的函数)
+        var posts=yield $.getJSON("https://jsonplaceholder.typicode.com/posts");
+        console.log("posts:",posts);
+        var users=yield $.getJSON("https://jsonplaceholder.typicode.com/users");
+        console.log("users:",users);
+    }
+    run(gen);
+    function run(generator){
+        var g=generator();
+        function handle(nf){  //递归函数
+            if(!nf.done){
+                nf.value.then(function(data){
+                    return handle(g.next(data));
+                })
+            }
+        }
+        return handle(g.next());
+    }
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function outer(){
+        var x=5;
+        return {
+            get_x:function(){
+                return x;
+            },
+            set_x:function(y){
+                x=y;
+            }
+        }
+    }
+    var o=outer();
+    console.log(o.get_x());
+    o.set_x(111);
+    console.log(o.get_x());
+</script>
+</html>

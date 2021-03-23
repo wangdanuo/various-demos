@@ -1,0 +1,21 @@
+<!--component/selectLast/selectLast.wxml-->
+<view class="type-wrapper">
+  <view class="coupon-type" bindtap="onTypeChange">
+      <view class="coupon-text">{{currentText}}</view>
+      <text class="coupon-icon" animation="{{animationData}}"></text>
+  </view>
+  <view class="coupon-list" wx:if="{{isListShow}}">
+      <view wx:for="{{arrayData}}" data-index="{{index}}" wx:key="id" class="coupon-item" bindtap="setText">
+        {{item.txt}}
+      </view>
+  </view>
+</view>
+<view>9909</view>
+<view>9909</view>
+<view>9909</view>
+<view>9909</view>
+<view>9909</view>
+<view>9909</view>
+<view>9909</view>
+<view>9909</view>
+<view>9909</view>

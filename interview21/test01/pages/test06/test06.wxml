@@ -1,0 +1,6 @@
+<view class="box">
+  <view bindtap="click"></view>
+  <button open-type="share">点击分享</button>
+  <button open-type="getUserInfo">getUserInfo</button>
+  <web-view src="https://img.souche.com/f2e/f9fb54dc51da9e505989f632ce3e3397.png"></web-view>
+</view>

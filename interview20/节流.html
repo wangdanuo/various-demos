@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节流</title>
+    <style>
+        #box{
+            width: 800px;
+            height: 500px;
+            background-color: pink;
+            font-size: 40px;
+            text-align: center;
+            line-height: 500px;
+        }
+        body{
+            margin:0px;
+            padding:0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+<script>
+    const box=document.getElementById("box");
+    function throttle(func,delay){
+        let run=true;   //变量run的初始化（只执行一次，因为onmousemove绑定的函数带括号，会被立即调用，并将函数的返回值绑定为事件的处理函数）
+        return function(){
+            if(!run){
+                return;  //如果开关关闭了，那就直接不执行下边的代码
+            }
+            run=false;  //持续触发的话，run一直是false，就会停在上边的判断那里
+            setTimeout(() => {
+                func.apply(this,arguments);
+                run=true;   //定时器到时间之后，会把开关打开，函数就会被执行
+            }, delay);
+        }
+    }
+    box.onmousemove=throttle(function(e){
+        box.innerHTML=`${e.clientX},${e.clientY}`;
+    },1000);
+</script>
+</html>
