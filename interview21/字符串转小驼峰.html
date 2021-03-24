@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  function parseFunc(obj) {
+    const key = Object.keys(obj).toString()
+    const newKey = key.split('')
+    var k = ''
+    const result = newKey.filter((value, idx, array) => {
+      return (value !== '_') && (value !== '-')
+    })
+    result.forEach((item, idx) => {
+      k = k.concat(item)
+    })
+    const f = k.substr(1).toUpperCase()
+    const b = k.substr(0, 1).concat(f)
+    console.log(b, 'b');
+  }
+  parseFunc({'q-a_b-cd_t-hh': 1})
+</script>
+</html>
