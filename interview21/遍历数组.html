@@ -9,6 +9,7 @@
     
 </body>
 <script>
+    /*
     var array = [10,34,57,43,76];
     var res = array.forEach(function (item, index, input) {
         input[index] = item*10;
@@ -21,5 +22,12 @@
     })  
     console.log(res2);
     console.log(array2);    // 不变
+    */
+   // 数组去重
+    var array = [10,34,57,34,76];
+    var newArr = array.filter(function(item, idx) {
+        return array.indexOf(item) === idx
+    })
+    console.log(newArr, 'newArr');
 </script>
 </html>

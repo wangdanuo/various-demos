@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  var arr = ['3', 6, '9', 0, '200']
+  function func(a, data) {
+    var result1 = a.sort((a, b) => a - b)
+    var result2 = result1.slice(data - 1, data)
+    console.log(result2, '111');
+    return result2
+  }
+  func(arr, 5)
+</script>
+</html>
