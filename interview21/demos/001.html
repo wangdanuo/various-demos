@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  // var F=function(){};
+
+  // Object.prototype.a=function(){
+  //   console.log('a()')
+  // };
+
+  // Function.prototype.b=function(){
+  //   console.log('b()')
+  // }
+
+  // var f=new F();
+  var F = function(){};
+  Object.prototype.a = function(){
+    console.log('123');
+  };
+  Function.prototype.b = function(){
+    console.log('456');
+  }
+  var f = new F();
+  F.a();
+  F.b();
+  f.a();
+  f.b();
+// 答案：123；456；123；报错：Uncaught TypeError: f.b is not a function
+/*
+解析：
+1、F.a()；F.b();
+F是个构造函数，而F是构造函数Function的一个实例。因为F instanceof Object === true、F instanceof Function === true，结论：F是Object和Function的实例，即F能访问到a，也能访问到b。所以F.a()输出123，F.b()输出456。
+2、f.a()；f.b();
+f并不是Function的实例，因为它本来就不是构造函数，调用的不是Function原型链上的相关属性和方法，它只能访问到Object原型链。所以f.a()输出123，而f.b()就报错了。
+3、分析查找路径
+①F.a 的查找路径：F 自身：没有 → F.__proto__(Function.prototype)：没有 → F.__proto__.__proto__(Object.prototype)：找到了输出 123
+②F.b 的查找路径：F 自身：没有 → F.__proto__(Function.prototype)：456
+③f.a 的查找路径：f 自身：没有 → f.__proto__(Object.prototype)：输出 123
+④f.b 的查找路径：f 自身：没有 → f.__proto__(Object.prototype)：没有 → f.__proto__.__proto__(Object.prototype.__proto__:null)：找不到，报错
+*/
+</script>
+</html>

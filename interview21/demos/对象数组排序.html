@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  let students=[
+    {name:'jspang',age:32},
+    {name:'Panda',age:30},
+    {name:'PanPaN',age:21},
+    {name:'King',age:45},
+    {age: () => {console.log(111);}}
+  ]
+  let result = students.filter((item, idx) => {
+    return typeof(item.age) === 'number'
+  })
+  function sort(array, key) {
+  console.log(array, 'array');
+    return array.sort(function(a, b) {
+      return a[key] - b[key]
+    })
+  }
+  sort(result, 'age')
+</script>
+</html>

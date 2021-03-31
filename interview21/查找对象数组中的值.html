@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  var tree = {
+    name: 'a',
+    age: 1,
+    child: [{
+      name: 'b',
+      age: 2,
+      child: [{
+          name: 'c',
+          age: 3
+      }]
+    }, {
+      name: 'd',
+      age: 4
+    }]
+  }
+  function howOld(data, str) {
+    if (Array.isArray(data)) {
+      for (let item of data) {
+        if (item.name === str) {
+          console.log(item.age, 'result');
+          return item.age
+        } else if (item.child) {
+          howOld(item.child, str)
+        }
+      }
+    } else {
+      if (data['name'] === str) {
+        console.log(data['age'], 'result');
+        return data['age']
+      } else {
+        howOld(data.child, str)
+      }
+    }
+  }
+  howOld(tree, 'c')
+</script>
+</html>
