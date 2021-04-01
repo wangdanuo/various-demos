@@ -1,0 +1,12 @@
+.c-digital-scroll {
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+}
+.box-container {
+  transition: all;
+  box-sizing: border-box;
+}
+.number-box {
+  box-sizing: border-box;
+}
